@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/wanghanxiang/mock_server#readme",
   "devDependencies": {
+    "@types/glob": "^7.2.0",
     "@types/ioredis": "^4.26.4",
     "@types/koa": "^2.13.3",
     "@types/koa-router": "^7.4.2",
@@ -42,6 +43,7 @@
     "@types/koa__router": "^8.0.4",
     "axios": "^0.21.1",
     "bufferhelper": "^0.2.1",
+    "glob": "^7.2.0",
     "iconv-lite": "^0.6.3",
     "koa": "^2.13.1",
     "koa-body": "^4.2.0",
