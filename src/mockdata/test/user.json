@@ -1,4 +1,8 @@
 {
-  "id": 1,
-  "username": "kaiding"
+    "method": "GET",
+    "note": "获取用户列表",
+    "mockdata": {
+        "id": 1,
+        "username": "kaiding"
+    }
 }

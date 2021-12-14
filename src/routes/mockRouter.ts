@@ -16,12 +16,8 @@ export const mockRouter = (router: any) => {
         router.get(mockPath, (ctx: any, next: any) => {
             try {
                 let jsonStr = fs.readFileSync(item).toString();
-                // ctx.body = {
-                //   data: JSON.parse(jsonStr),
-                //   state: 200,
-                //   msg: 'success' // 自定义响应体
-                // }
-                ctx.body = JSON.parse(jsonStr);
+                const { mockdata } = JSON.parse(jsonStr);
+                ctx.body = mockdata;
             } catch (err) {
                 ctx.throw('服务器错误', 500);
             }

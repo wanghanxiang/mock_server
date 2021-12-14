@@ -1,0 +1,14 @@
+{
+    "method": "GET",
+    "note": "获取数据接口",
+    "mockdata": {
+        "info": [
+            "272779",
+            {
+                "firstname": "Gui",
+                "lastname": "tenbay",
+                "middlename": "M"
+            }
+        ]
+    }
+}
