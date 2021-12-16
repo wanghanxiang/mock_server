@@ -1,5 +1,6 @@
 {
     "method": "GET",
+    "name": "获取用户接口",
     "note": "获取用户列表",
     "mockdata": {
         "id": 1,

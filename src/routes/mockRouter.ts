@@ -7,27 +7,39 @@ const routerMap = new Object({});
 
 export const mockRouter = (router: any) => {
     let mockPath = path.resolve(__dirname, '.././mockdata', "**/*.json");
-    console.info(mockPath)
     // 注册路由
     glob.sync(mockPath).forEach((item, i) => {
         let mockJsonPath = item && item.split(prefix)[1];
         let mockPath = mockJsonPath.replace('.json', '');
 
-        router.get(mockPath, (ctx: any, next: any) => {
-            try {
-                let jsonStr = fs.readFileSync(item).toString();
-                const { mockdata } = JSON.parse(jsonStr);
-                ctx.body = mockdata;
-            } catch (err) {
-                ctx.throw('服务器错误', 500);
-            }
-        });
+        let jsonStr = fs.readFileSync(item).toString();
+        const { mockdata, method } = JSON.parse(jsonStr);
+
+        if (method == 'GET') {
+            router.get(mockPath, (ctx: any, next: any) => {
+                try {
+                    ctx.body = mockdata;
+                } catch (err) {
+                    ctx.throw('服务器错误', 500);
+                }
+            });
+        } else if (method == 'POST') {
+            router.post(mockPath, (ctx: any, next: any) => {
+                try {
+                    ctx.body = mockdata;
+                } catch (err) {
+                    ctx.throw('服务器错误', 500);
+                }
+            });
+        } else {
+            console.info(`暂不支持类型`);
+        }
+        console.info(`注册的url ${mockPath}, 请求方法: ${method}`);
 
         // 记录路由
         //@ts-ignore
         routerMap[prefix + mockJsonPath] = prefix + mockPath;
     });
-    console.info(`routerMap====>`, routerMap);
     createRouterMap(routerMap);
 }
 

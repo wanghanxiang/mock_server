@@ -1,5 +1,6 @@
 {
     "method": "GET",
+    "name": "获取数据接口",
     "note": "获取数据接口",
     "mockdata": {
         "info": [

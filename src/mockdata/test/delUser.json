@@ -1,0 +1,11 @@
+{
+    "method": "POST",
+    "name": "删除用户接口",
+    "note": "删除用户",
+    "mockdata": {
+        "status": {
+            "code": 200,
+            "msg": "ok"
+        }
+    }
+}

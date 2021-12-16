@@ -1,4 +1,5 @@
 {
+  "/mockdata/test/delUser.json": "/mockdata/test/delUser",
   "/mockdata/test/getData.json": "/mockdata/test/getData",
   "/mockdata/test/user.json": "/mockdata/test/user"
 }
