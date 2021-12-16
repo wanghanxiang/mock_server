@@ -30,3 +30,14 @@ this url is localhost:8080/test/getData
 }
 ```
 
+
+
+
+
+list：
+
+1、模拟请求url 返回对应的mock数据 ✅
+
+2、根据填写的mock数据，自动生成markdown接口文档 ✅
+
+3、在网页端可以修改。生成mockdata数据
